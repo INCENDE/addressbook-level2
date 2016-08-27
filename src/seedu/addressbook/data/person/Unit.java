@@ -11,15 +11,13 @@ public class Unit {
     public static final String UNIT_VALIDATION_REGEX = "#[\\p{Digit}+]-[\\p{Digit}+]";
     
     public final String value;
-    private boolean isPrivate;
     
     /**
      * Validates given unit.
      *
      * @throws IllegalValueException if given unit string is invalid.
      */
-    public Unit(String unit, boolean isPrivate) throws IllegalValueException {
-        this.isPrivate = isPrivate;
+    public Unit(String unit) throws IllegalValueException {
         if (!isValidunit(unit)) {
             throw new IllegalValueException(MESSAGE_UNIT_CONSTRAINTS);
         }
@@ -49,9 +47,5 @@ public class Unit {
     @Override
     public int hashCode() {
         return value.hashCode();
-    }
-
-    public boolean isPrivate() {
-	return isPrivate;
     }
 }
