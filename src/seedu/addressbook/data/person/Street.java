@@ -8,7 +8,7 @@ import seedu.addressbook.data.exception.IllegalValueException;
 public class Street {
     public static final String EXAMPLE = "123";
     public static final String MESSAGE_STREET_CONSTRAINTS = "Street must be a number or alphabet";
-    public static final String STREET_VALIDATION_REGEX = "\\p{Alnum}+";
+    public static final String STREET_VALIDATION_REGEX = "[\\w\\s\\.]+";
     
     public final String value;
     
@@ -18,8 +18,8 @@ public class Street {
      * @throws IllegalValueException if given street string is invalid.
      */
     public Street(String street) throws IllegalValueException {
-        if (!isValidstreet(street)) {
-            throw new IllegalValueException(MESSAGE_STREET_CONSTRAINTS);
+        if (!isValidStreet(street)) {
+            throw new IllegalValueException(street + ": " + MESSAGE_STREET_CONSTRAINTS);
         }
         this.value = street;
     }
@@ -28,7 +28,7 @@ public class Street {
     /**
      * Returns true if a given string is a valid address street.
      */
-    public static boolean isValidstreet(String test) {
+    public static boolean isValidStreet(String test) {
         return test.matches(STREET_VALIDATION_REGEX);
     }
 

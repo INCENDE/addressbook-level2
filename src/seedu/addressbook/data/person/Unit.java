@@ -8,7 +8,7 @@ import seedu.addressbook.data.exception.IllegalValueException;
 public class Unit {
     public static final String EXAMPLE = "#00-00";
     public static final String MESSAGE_UNIT_CONSTRAINTS = "Unit must be #number-number";
-    public static final String UNIT_VALIDATION_REGEX = "#[\\p{Digit}+]-[\\p{Digit}+]";
+    public static final String UNIT_VALIDATION_REGEX = "#[\\p{Digit}]+-[\\p{Digit}]+";
     
     public final String value;
     
