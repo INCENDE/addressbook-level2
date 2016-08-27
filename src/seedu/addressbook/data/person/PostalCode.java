@@ -1,7 +1,10 @@
 package seedu.addressbook.data.person;
 
 import seedu.addressbook.data.exception.IllegalValueException;
-
+/**
+ * Represents a Person's postal code address in the address book.
+ * Guarantees: immutable; is valid as declared in {@link #isValidPostalCode(String)}
+ */
 public class PostalCode {
     public static final String EXAMPLE = "123";
     public static final String MESSAGE_POSTAL_CODE_CONSTRAINTS = "PostalCode must be a number";

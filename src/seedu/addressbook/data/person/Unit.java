@@ -1,7 +1,10 @@
 package seedu.addressbook.data.person;
 
 import seedu.addressbook.data.exception.IllegalValueException;
-
+/**
+ * Represents a Person's unit address in the address book.
+ * Guarantees: immutable; is valid as declared in {@link #isValidUnit(String)}
+ */
 public class Unit {
     public static final String EXAMPLE = "#00-00";
     public static final String MESSAGE_UNIT_CONSTRAINTS = "Unit must be #number-number";
