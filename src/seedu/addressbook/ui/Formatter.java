@@ -10,11 +10,11 @@ import seedu.addressbook.data.person.ReadOnlyPerson;
 public class Formatter {
 
     /** Format of indexed list item */
-    static final String MESSAGE_INDEXED_LIST_ITEM = "\t%1$d. %2$s";
+    public static final String MESSAGE_INDEXED_LIST_ITEM = "\t%1$d. %2$s";
 
 
     /** Offset required to convert between 1-indexing and 0-indexing.  */
-    static final int DISPLAYED_INDEX_OFFSET = 1;
+    public static final int DISPLAYED_INDEX_OFFSET = 1;
 
     /** Formats a list of strings as a viewable indexed list. */
     static String getIndexedListForViewing(List<String> listItems) {
