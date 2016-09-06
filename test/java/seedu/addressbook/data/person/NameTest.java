@@ -1,5 +1,6 @@
 package seedu.addressbook.data.person;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -29,6 +30,18 @@ public class NameTest {
 	final boolean result = name1.isSimilar(name2);
 	assertTrue(result);	
     }
+    
+    /**
+     * Test the other name is null
+     */
+    @Test
+    public void isSimilar_otherNull() throws IllegalValueException {
+	Name name1 = new Name("John Smith");
+	Name name2 = null;
+	final boolean result = name1.isSimilar(name2);
+	assertFalse(result);	
+    }
+    
     
     
     /**
