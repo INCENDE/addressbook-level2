@@ -1,5 +1,6 @@
 package seedu.addressbook.data.person;
 
+import seedu.addressbook.common.Utils;
 import seedu.addressbook.data.exception.IllegalValueException;
 
 import java.util.Arrays;
@@ -68,19 +69,19 @@ public class Name {
      * @return true is similar
      */
     public boolean isSimilar(Name other) {
-	if(isEqualsIgnoreCase(other)) {
-	    return true;
-	} else if (doesNameContainSomeSameParts(other)) {
-	    return true;
-	}
-	return false;
+	return isNull(other) && isEqualsIgnoreCase(other) && doesNameContainSomeParts(other);
+    }
+    
+    private boolean isNull(Name other)
+    {
+	return Utils.isAnyNull(other);
     }
     
     private boolean isEqualsIgnoreCase(Name other) {
 	return this.fullName.equalsIgnoreCase(other.fullName);
     }
     
-    private boolean doesNameContainSomeSameParts(Name other) {
+    private boolean doesNameContainSomeParts(Name other) {
 	String[] splitThis = this.fullName.split(" ");
 	String[] splitOther = other.fullName.split(" ");
 	
