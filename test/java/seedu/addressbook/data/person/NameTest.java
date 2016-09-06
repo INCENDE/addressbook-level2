@@ -21,7 +21,10 @@ public class NameTest {
     }
     
     @Test
-    public void isSimilar_caseDifferent() {
-	
+    public void isSimilar_caseDifferent() throws IllegalValueException {
+	Name name1 = new Name("John Smith");
+	Name name2 = new Name("JoHn SmItH");
+	final boolean result = name1.isSimilar(name2);
+	assertTrue(result);	
     }
 }

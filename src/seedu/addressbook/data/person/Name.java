@@ -62,7 +62,7 @@ public class Name {
     }
     
     public boolean isSimilar(Name other) {
-	if(this.fullName.equals(other.fullName)) {
+	if(this.fullName.equalsIgnoreCase(other.fullName)) {
 	    return true;
 	}
 	return false;
