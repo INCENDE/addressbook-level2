@@ -61,7 +61,7 @@ public class Name {
         return fullName.hashCode();
     }
     
-    public boolean isSimilar() {
+    public boolean isSimilar(Name other) {
 	return false;
     }
 
