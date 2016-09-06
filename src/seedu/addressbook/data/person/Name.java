@@ -68,8 +68,28 @@ public class Name {
      * @return true is similar
      */
     public boolean isSimilar(Name other) {
-	if(this.fullName.equalsIgnoreCase(other.fullName)) {
+	if(isEqualsIgnoreCase(other)) {
 	    return true;
+	} else if (doesNameContainSomeSameParts(other)) {
+	    return true;
+	}
+	return false;
+    }
+    
+    private boolean isEqualsIgnoreCase(Name other) {
+	return this.fullName.equalsIgnoreCase(other.fullName);
+    }
+    
+    private boolean doesNameContainSomeSameParts(Name other) {
+	String[] splitThis = this.fullName.split(" ");
+	String[] splitOther = other.fullName.split(" ");
+	
+	for(String sThis : splitThis) {
+	    for(String sOther : splitOther) {
+		if(sThis.equalsIgnoreCase(sOther)) {
+		    return true;
+		}
+	    }
 	}
 	return false;
     }
