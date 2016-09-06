@@ -19,7 +19,11 @@ public class NameTest {
 	final boolean result = name1.isSimilar(name2);
 	assertTrue(result);
     }
-    
+
+    /**
+     * Test the case sensitivity
+     * @throws IllegalValueException
+     */
     @Test
     public void isSimilar_caseDifferent() throws IllegalValueException {
 	Name name1 = new Name("John Smith");

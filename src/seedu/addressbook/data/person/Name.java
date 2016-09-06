@@ -61,6 +61,12 @@ public class Name {
         return fullName.hashCode();
     }
     
+    /**
+     * Checks the similarity of other name
+     * <br> - Case insensitive
+     * @param other
+     * @return true is similar
+     */
     public boolean isSimilar(Name other) {
 	if(this.fullName.equalsIgnoreCase(other.fullName)) {
 	    return true;
