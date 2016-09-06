@@ -28,7 +28,7 @@ public class UtilsTest {
 	final boolean result = Utils.isAnyNull(obj1, obj2);
 	assertTrue(result);
     }
-    
+
     /**
      * Test elementsAreUnique method
      */
@@ -43,7 +43,7 @@ public class UtilsTest {
 	final boolean result = Utils.elementsAreUnique(list);
 	assertTrue(result);
     }
-    
+
     @Test
     public void elementsAreUnique_notUnique() {
 	ArrayList<Object> list = new ArrayList<Object>();
