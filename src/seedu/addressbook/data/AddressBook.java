@@ -147,4 +147,12 @@ public class AddressBook {
     public UniqueTagList getAllTags() {
         return new UniqueTagList(allTags);
     }
+    
+    /**
+     * Adds changes of tags that has been made to {@link #taggings}
+     */
+    public void addChangedTag(Person person, Tag tag, boolean isAdd)
+    {
+	taggings.add(new Tagging(person, tag, isAdd));
+    }
 }
